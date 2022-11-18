@@ -1,9 +1,29 @@
+#logo{
+    width: 200px;
+    animation-name: logo;
+    animation-duration: 2s;
+    }
+    
+    @keyframes logo {
+    from {width: 25px;}
+    to {width: 200px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+    } 
+
+
+
+
+nav img{
+    width: 50px;
+}
 body img{
     width: 300px;
 }
 
 body{
     background-color: #ffffce;
+    font-family: Helvetica;
 }
 
 h1{
@@ -18,14 +38,24 @@ header {
 }
 
 nav li{
+    
     display: inline-block;
-    border: 1.5px solid black;
-    border-radius: 30px; 
     padding: 15px;
     width: 200px;
     height: 15px;
-    text-align: center;
+    text-align:right;
 }
+
+nav a{
+    color:#6193eb;
+    font-size: 30px;
+}
+
+nav a:hover{
+    color:blue;
+}
+
+
 
 .foodgallery{
     display: grid;
@@ -39,3 +69,19 @@ nav li{
     width: 50%;
     margin: auto;
 }
+
+.DrinkGallery img{
+    display: flex;
+
+}
+
+@media screen and (min-width: 500px){
+    
+
+}
+
+@media screen and (min-width: 700px){
+
+}
+
+
