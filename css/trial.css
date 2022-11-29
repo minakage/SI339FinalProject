@@ -1,0 +1,12 @@
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.mySlides{
+    object-fit:cover;
+    width: 100px;
+    height: 600px;
+    border-radius: 5%;
+    
+}

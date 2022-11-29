@@ -4,39 +4,111 @@
     <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Ann Arbor's Finest</title>
+    
   </head>
 
   <body>
-    
+  <a href = '#main'> Skip to Main Content</a>
     <header>
-      <a href = '#main'> Skip to Main Content</a>
-      <img src="images/logo.png" alt = "Logo Images" id="logo">
+      
+      
+
         <nav>
           
             <ul class="nav_links">
             
-              <li><a href="home.html">Home</a></li>
+              <li><a href="home.html" class="activelink">Home</a></li>
               <li><a href="food.html">Food</a></li>
               <li><a href="drinks.html">Drinks</a></li>
               <li><a href="recs.html">Recs</a></li>
         </nav> 
-        <h1> Ann Arbor Food </h1>
+      
         
     </header>
 
     <main id="main">
     
 
-    <img src="images/Ann-Arbor-Michigan.jpg" alt = "Ann Arbor Michigan">
-    
-    
+      <div class="container">
+       <div class = "centered">ANN ARBOR'S FINEST</div>
+        <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
+        <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%"></img>
+        <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
+      
+        
+      <!--
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+      </div>
+      <script>
+          var slideIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2300); // Change image every 2 seconds
+      }
+      
+      </script>
+       
+      
+
+    </div>
+
+    <div class = "aboutsection">
+      <div class="bold">Ann Arbor's Finest is your guide to the best food, drinks, and hidden gems of Ann Arbor. </div>
+      
+        <div class = "welcome">Welcome to Ann Arbor's Finest! Our names are Neha Kotagiri and Mia Inakage. We are students at the University of Michigan School of Information studying UX Design, and we love to eat! </div>
+        
+        
+        
+        
+
+    </div>
+
+    <div class = "contact">
+      <div class = "contacttext"> Have questions or like what you see? Don't hesitate to reach out!</div>
+
+
 
     
 
+    <div class="emailform">
+      <form action="action_page.php">
+    
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Your Email</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+    </div>
+      
+  </div>
 
 
 
-    </main>
+    
 
   </body>
 

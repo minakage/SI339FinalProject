@@ -17,27 +17,32 @@ body img{
 }
 
 body{
-    background-color: #ffffce;
-    font-family: 'Montserrat';
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1{
     text-align: center;
-    color:#6193eb;
+    
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    font-family: 'Montserrat';
+nav {
+    align-self: flex-end;
 }
 
 .nav_links{
+    
+    
     display: flex;
     flex-direction: row;
     list-style: none;
-    font-family: 'Montserrat';
+    width: 40%;
+   
+    justify-content: space-between;
+    align-content: flex-end;
+    
+    
+
 }
 
 nav img{
@@ -45,33 +50,171 @@ nav img{
 }
 
 nav a{
-    color:#6193eb;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:none;
+    color:black;
     font-size: 30px;
+    margin-left: auto;
 }
 
 nav a:hover{
-    color:blue;
+    color:purple;
+}
+
+.activelink{
+    border: 3px solid black;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
 }
 
 
 
 .foodgallery{
+    background-color: black;
+    color: white;
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
+    padding-top: 50px;
+    padding-left: 200px;
 }
 
 .foodgallery img{
     width: 50%;
     margin: auto;
+    
 }
 
 
-.flip-card {
+
+.container{
+    width: 100%;
+    margin: auto;
+    
+    text-align: center;  
+    filter:opacity(90%);
+    
+}
+
+
+
+
+.mySlides{
+    object-fit:cover;
+    
+    width: 100px;
+    height: 500px;   
+    
+}
+
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width:100%;
+    font-size: 110px;
+    color:black;
+    font-weight:800;
+  }
+
+
+
+.aboutsection{
+    width: 100%;
+    min-height: 60vh;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    
+
+}
+
+
+.bold{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:55px;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+.welcome{
+    padding: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    
+}
+
+
+
+.contact{
+    width: 60%;
+    min-height: 60vh;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    
+
+}
+
+.contacttext{
+    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color:black;
+    text-align:center;
+}
+
+input[type=text], select, textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid whitesmoke; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: white;
+    color:black;
+    border: solid 1px black;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .emailform {
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding-bottom: 40px;
+  }
+  
+
+  .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
+    height: 300px;
+    border: 1px solid black;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -85,13 +228,16 @@ nav a:hover{
     transform-style: preserve-3d;
   }
   
+  
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
+
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
+    
     position: absolute;
     width: auto;
     height: auto;
@@ -99,12 +245,14 @@ nav a:hover{
     backface-visibility: hidden;
   }
   
+
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #ffffff;
     color: black;
   }
   
+
   /* Style the back side */
   .flip-card-back {
     background-color: dodgerblue;
@@ -113,24 +261,166 @@ nav a:hover{
   }
 
 
-.DrinkGallery img{
+.DrinkGallery {
+    background-color: black;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
     flex-direction: column;
-
-
-}
-
-@media screen and (min-width: 500px){
+    align-items: center;
     
+    
+    
+    
+}
 
+.shinola, .literati, .labcafe, .roosroast, .cometcoffee, .dingtea, .quickly, .sharetea, .sweetwaters {
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: space-around;
+    column-gap: 400px;
+    
 }
 
 
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-@media screen and (min-width: 700px){
 
+#footer{
+    padding-left: 20px;
+    padding-top: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 66px;
+    margin: auto;
+    text-align: center;
 }
-
 

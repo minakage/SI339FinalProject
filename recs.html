@@ -8,18 +8,42 @@
   <body>
     <header>
       <a href = '#main'> Skip to Main Content</a>
-      <img src="images/logo.png" alt = "Logo Images">
+      
         <nav>
             <ul class="nav_links">
           
               <li><a href="home.html">Home</a></li>
               <li><a href="food.html">Food</a></li>
               <li><a href="drinks.html">Drinks</a></li>
-              <li><a href="recs.html">Recs</a></li>
+              <li><a href="recs.html" class = "activelink">Recs</a></li>
         </nav> 
-        <h1> Ann Arbor Food </h1>
+       
     </header>
     <main id="main">
+      <div class="container" id="food">
+        <div class = "centered">FOOD</div>
+         <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
+       
+       </div>
+       <script>
+           var slideIndex = 0;
+       carousel();
+       
+       function carousel() {
+         var i;
+         var x = document.getElementsByClassName("mySlides");
+         for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+         }
+         slideIndex++;
+         if (slideIndex > x.length) {slideIndex = 1}
+         x[slideIndex-1].style.display = "block";
+         setTimeout(carousel, 2300); // Change image every 2 seconds
+       }
+       
+       </script>
 
     <img src = "images/honeylavenderlatte.jpeg" alt = "Lab Coffee">
     <img src = "images/tonkotsuramen.jpeg" alt = "Slurping Turtle Tonkotsu Ramen">
@@ -27,7 +51,74 @@
     <img src = "images/quicklyboba.jpeg" alt = "Quickly Boba">
     <img src = "images/nothaifriedrice.jpeg" alt = "No Thai Fried Rice">
   
-   
+   <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="images/honeylavenderlatte.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img1_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img2_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img3_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img4_wide.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="images/honeylavenderlatte.jpeg" onclick="currentSlide(1)" alt="Nature">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+    </div>
+  </div>
+</div>
 
     </main>
 

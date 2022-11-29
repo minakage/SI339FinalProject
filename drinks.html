@@ -8,30 +8,92 @@
   <body>
     <header>
       <a href = '#main'> Skip to Main Content</a>
-    <img src="images/logo.png" alt = "Logo Images">
+    
         <nav>
             <ul class="nav_links">
               <li><a href="home.html">Home</a></li>
               <li><a href="food.html">Food</a></li>
-              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="drinks.html" class="activelink">Drinks</a></li>
               <li><a href="recs.html">Recs</a></li>
         </nav> 
-       <h1> Ann Arbor Food </h1>
+       
     </header>
     <main id="main">
+      <div class="container" id="food">
+        <div class = "centered">FOOD</div>
 
-    <img src = "images/shinolacafe.jpeg" alt = "Shinola Cafe">
-    <p> cornbeef </p>
+         <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
+       
+       </div>
+       <script>
+           var slideIndex = 0;
+       carousel();
+       
+       function carousel() {
+         var i;
+         var x = document.getElementsByClassName("mySlides");
+         for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+         }
+         slideIndex++;
+         if (slideIndex > x.length) {slideIndex = 1}
+         x[slideIndex-1].style.display = "block";
+         setTimeout(carousel, 2300); // Change image every 2 seconds
+       }
+       
+       </script>
+
+    <div class="DrinkGallery">
+      <div class="shinola">
+
+      <img src = "images/shinolacafe.jpeg" alt = "Shinola Cafe" >
+    <p> Shinola </p>
+    </div>
+    <div class = "literati">
     <img src = "images/literaticoffee.jpeg" alt = "Literati Coffee">
-    <p> cornbeef </p>
-    <p> cornbeef </p>
+    <p> Literati </p>
+    </div>
+    
+    <div class = "labcafe">
     <img src = "images/labcoffee.jpeg" alt = "Lab Coffee">
+    <p> Lab Cafe</p>
+    </div>
+
+    <div class = "roosroast">
     <img src = "images/roosroast.jpeg" alt = "Roos Roast">
+    <p> Roos Roast</p>
+    </div>
+
+    <div class="cometcoffee">
     <img src = "images/cometcoffee.jpeg" alt = "Comet Coffee">
+      <p>Comet Coffee</p>
+    </div>
+
+    <div class="dingtea">
     <img src = "images/dingtea.jpeg" alt = "Ding Tea">
+      <p> Ding Tea</p>
+    </div>
+
+    <div class="sharetea">
     <img src = "images/sharetea.jpeg" alt = "Share Tea">
+    <p> ShareTea</p>
+
+  </div>
+
+  <div class = "quickly">
     <img src = "images/quickly.jpeg" alt = "Quickly Tea">
+    <p> Quickly</p>
+
+  </div>
+
+  <div class="sweetwaters">
     <img src = "images/sweetwaters.jpeg" alt = "sweetwaters">
+    <p> Sweetwaters</p>
+
+  </div>
+  </div>
   
 
     </main>
