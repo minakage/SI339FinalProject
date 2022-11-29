@@ -12,18 +12,13 @@
     } 
 
 
-
-
-nav img{
-    width: 50px;
-}
 body img{
     width: 300px;
 }
 
 body{
     background-color: #ffffce;
-    font-family: Helvetica;
+    font-family: 'Montserrat';
 }
 
 h1{
@@ -33,17 +28,18 @@ h1{
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: left;
 }
 
-nav li{
-    
-    display: inline-block;
-    padding: 15px;
-    width: 200px;
-    height: 15px;
-    text-align:right;
+.nav_links{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav img{
+    width: 50px;
 }
 
 nav a{
@@ -59,7 +55,8 @@ nav a:hover{
 
 .foodgallery{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
+    text-align: center;
 
 
 
@@ -72,6 +69,10 @@ nav a:hover{
 
 .DrinkGallery img{
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-direction: column;
+
 
 }
 
@@ -79,6 +80,8 @@ nav a:hover{
     
 
 }
+
+
 
 @media screen and (min-width: 700px){
 
