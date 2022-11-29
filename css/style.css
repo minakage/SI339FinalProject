@@ -30,12 +30,14 @@ header {
     display: flex;
     flex-direction: row;
     align-items: left;
+    font-family: 'Montserrat';
 }
 
 .nav_links{
     display: flex;
     flex-direction: row;
     list-style: none;
+    font-family: 'Montserrat';
 }
 
 nav img{
@@ -57,15 +59,59 @@ nav a:hover{
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
-
-
-
 }
 
 .foodgallery img{
     width: 50%;
     margin: auto;
 }
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: auto;
+    height: auto;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
 
 .DrinkGallery img{
     display: flex;
