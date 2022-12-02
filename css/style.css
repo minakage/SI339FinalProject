@@ -61,15 +61,12 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   list-style: none;
   padding: 0px;
 }
 
-ul {
-  padding: 0px;
-}
 
 
 nav a{
