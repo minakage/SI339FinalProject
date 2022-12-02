@@ -64,7 +64,11 @@ nav {
   justify-content: space-evenly;
   text-align: center;
   list-style: none;
-  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  padding-left: 0px;
+  row-gap: 25px;
 }
 
 
@@ -81,22 +85,28 @@ nav a{
 }
 
 nav a:hover{
-    color:purple;
+    color:blueviolet;
 }
 
 .activelink{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
     font-weight: bold;
+   
 }
-
 
 
 .foodgallery{
     background-color: black;
     color: white;
     display: grid;
+    justify-content: center;
     grid-template-columns: auto;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     overflow: clip;
     row-gap: 100px;
 }
@@ -125,13 +135,12 @@ nav a:hover{
 }
 
 
-
-.centered {
+  .container h1{
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -95%);
     width:100%;
     font-size: 110px;
     color:black;
@@ -230,6 +239,8 @@ input[type=text], select, textarea {
     width: 500px;
     height: 300px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border: blueviolet 20px solid;
+    border-radius: 10px;
   }
   
   /* This container is needed to position the front and back side */
@@ -344,13 +355,13 @@ input[type=text], select, textarea {
 
 
 
-#footer{
+footer{
     padding-left: 20px;
     padding-top: 8px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: white;
     color: black;
-    min-height: 66px;
+
     margin: auto;
     text-align: left;
 }
@@ -359,16 +370,17 @@ input[type=text], select, textarea {
 
 
 @media screen and (min-width: 800px) {
+.nav_links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
 
-  header{
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.nav_links{
-    flex-direction: row;
 }
 
 
@@ -383,18 +395,12 @@ input[type=text], select, textarea {
     padding-top: 50px;
     padding-left: 200px;
     row-gap: 100px;
-  
-
 }
 
-.activelink{
-  padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-
-
+.flip-card{
+  border: blueviolet 10px solid;
 }
+
 
 
 }
@@ -402,6 +408,9 @@ input[type=text], select, textarea {
 
 @media screen and (min-width: 1200px) {
   
+ 
+
+ 
 
 }
 

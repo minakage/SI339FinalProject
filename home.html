@@ -7,7 +7,7 @@
     
   </head>
 
-  <body>
+  
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
       
@@ -26,20 +26,19 @@
       
 
     </header>
+    <body>
 
     
     
 
       <div class="container">
-       <div class = "centered">ANN ARBOR'S FINEST</div>
+       <h1>ANN ARBOR'S FINEST</h1>
         <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
         <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%" ></img>
         <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
       
         
-      <!--
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+
       </div>
       <script>
           var slideIndex = 0;
@@ -54,7 +53,7 @@
         slideIndex++;
         if (slideIndex > x.length) {slideIndex = 1}
         x[slideIndex-1].style.display = "block";
-        setTimeout(carousel, 2300); // Change image every 2 seconds
+        setTimeout(carousel, 1600); // Change image every 2 seconds
       }
       
       </script>
@@ -77,7 +76,7 @@
     </div>
 
     <div class = "contact">
-      <div class = "contacttext"> Have questions or like what you see? Don't hesitate to reach out!</div>
+      <div class = "contacttext"> If you have any questions or would like to let us know your favorite foods and drinks in Ann Arbor, please don't hesitate to reach out!</div>
 
 
 
@@ -87,20 +86,13 @@
       <form action="action_page.php">
     
         <label for="fname">Full Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
     
         <label for="lname">Your Email</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
     
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
     
         <input type="submit" value="Submit">
     
@@ -113,12 +105,14 @@
 
     
 
-  </body>
+  
   </main>
+</body>
 
-  <footer id="footer">
+  <footer >
 
-    <h3> Made by hungry students for hungry students :) </h3>
+    <h2> Made by hungry students for hungry students :) </h2>
+    <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
     </footer>
     
   </html>

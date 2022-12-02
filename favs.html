@@ -5,7 +5,7 @@
     <title>Ann Arbor Recommendations</title>
   </head>
 
-  <body>
+  
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
      
@@ -20,9 +20,10 @@
         </nav> 
        
     </header>
+    <body>
     
       <div class="container" id="food">
-        <div class = "centered">OUR FAVORITES</div>
+       <h1>FAVORITES</h1>
          <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
          <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%"></img>
          <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
@@ -41,7 +42,7 @@
          slideIndex++;
          if (slideIndex > x.length) {slideIndex = 1}
          x[slideIndex-1].style.display = "block";
-         setTimeout(carousel, 2300); // Change image every 2 seconds
+         setTimeout(carousel, 1600); // Change image every 2 seconds
        }
        
        </script>
@@ -54,11 +55,11 @@
 
 <!-- thumbnail image wrapped in a link -->
 <a href="#img1">
-  <img src="images/tonkotsuramen.jpeg">
+  <img src="images/tonkotsuramen.jpg">
 </a>
 
 <a href="#img2">
-  <img src="images/porkbellybao.jpeg">
+  <img src="images/porkbellybao.png">
 </a>
 
 <!-- thumbnail image wrapped in a link -->
@@ -68,14 +69,14 @@
 
 <!-- lightbox container hidden with CSS -->
 <a href="#" class="lightbox" id="img1">
-  <span style="background-image: url('images/tonkotsuramen.jpeg')"></span>
+  <span style="background-image: url('images/tonkotsuramen.jpg')"></span>
 </a>
 
 
 
 <!-- lightbox container hidden with CSS -->
 <a href="#" class="lightbox" id="img2">
-  <span style="background-image: url('images/porkbellybao.jpeg')"></span>
+  <span style="background-image: url('images/porkbellybao.png')"></span>
 </a>
 
 
@@ -94,9 +95,11 @@
 
 
     </main>
+  </body>
 
-    <footer id="footer">
+    <footer>
 
-      <h3> Made by hungry students for hungry students :) </h3>
+      <h2> Made by hungry students for hungry students :) </h2>
+      <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
       </footer>
   
