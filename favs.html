@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ann Arbor Recommendations</title>
+  </head>
+
+  <body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+     
+      
+        <nav>
+            <ul class="nav_links">
+          
+              <li><a href="home.html">Home</a></li>
+              <li><a href="food.html">Food</a></li>
+              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="favs.html" class = "activelink">Favorites</a></li>
+        </nav> 
+       
+    </header>
+    
+      <div class="container" id="food">
+        <div class = "centered">OUR FAVORITES</div>
+         <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%"></img>
+         <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
+       
+       </div>
+       <script>
+           var slideIndex = 0;
+       carousel();
+       
+       function carousel() {
+         var i;
+         var x = document.getElementsByClassName("mySlides");
+         for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+         }
+         slideIndex++;
+         if (slideIndex > x.length) {slideIndex = 1}
+         x[slideIndex-1].style.display = "block";
+         setTimeout(carousel, 2300); // Change image every 2 seconds
+       }
+       
+       </script>
+
+<main id="main">
+
+
+  
+<div class = "favs">
+
+<!-- thumbnail image wrapped in a link -->
+<a href="#img1">
+  <img src="images/tonkotsuramen.jpeg">
+</a>
+
+<a href="#img2">
+  <img src="images/porkbellybao.jpeg">
+</a>
+
+<!-- thumbnail image wrapped in a link -->
+<a href="#img3">
+  <img src="images/nothaifriedrice.jpeg">
+</a>
+
+<!-- lightbox container hidden with CSS -->
+<a href="#" class="lightbox" id="img1">
+  <span style="background-image: url('images/tonkotsuramen.jpeg')"></span>
+</a>
+
+
+
+<!-- lightbox container hidden with CSS -->
+<a href="#" class="lightbox" id="img2">
+  <span style="background-image: url('images/porkbellybao.jpeg')"></span>
+</a>
+
+
+<!-- lightbox container hidden with CSS -->
+<a href="#" class="lightbox" id="img3">
+  <span style="background-image: url('images/nothaifriedrice.jpeg')"></span>
+</a>
+</div>
+
+
+<!-- lightbox container hidden with CSS -->
+<a href="#" class="lightbox" id="img3">
+  <span style="background-image: url('images/nothaifriedrice.jpeg')"></span>
+</a>
+</div>
+
+
+    </main>
+
+    <footer id="footer">
+
+      <h3> Made by hungry students for hungry students :) </h3>
+      </footer>
+  
