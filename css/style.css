@@ -285,7 +285,7 @@ input[type=text], select, textarea {
   }
 
 
-.DrinkGallery {
+.drinkgallery {
     background-color: black;
     width: 100%;
     display: flex;
@@ -310,7 +310,9 @@ input[type=text], select, textarea {
     
 }
 
-
+.favgallery{
+  background-color: black;
+}
 
 
 .lightbox {
@@ -370,17 +372,14 @@ footer{
 
 
 @media screen and (min-width: 800px) {
-.nav_links {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
-  text-align: center;
-  list-style: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
 
+  .nav_links {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  text-transform: uppercase;
 }
 
 
@@ -393,8 +392,6 @@ footer{
     grid-template-columns: auto auto;
     text-align: center;
     padding-top: 50px;
-    padding-left: 200px;
-    row-gap: 100px;
 }
 
 .flip-card{
@@ -407,6 +404,14 @@ footer{
 
 
 @media screen and (min-width: 1200px) {
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    text-transform: uppercase;
+  }
   
  
 
