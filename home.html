@@ -1,90 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>Ann Arbor's Finest</title>
     <link rel="shortcut icon" type="images" href="images/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-    
   </head>
 
-  
+  <body>
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
-      
-      
-
-        <nav>
-          
-            <ul class="nav_links">
-            
-              <li><a href="home.html" class="activelink">Home</a></li>
-              <li><a href="food.html">Food</a></li>
-              <li><a href="drinks.html">Drinks</a></li>
-              <li><a href="favs.html">Favorites</a></li>
-        </nav> 
-      
-      
-
+      <nav>
+        <ul class="nav_links">
+          <li><a href="home.html" class="activelink">Home</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="drinks.html">Drinks</a></li>
+          <li><a href="favs.html">Favorites</a></li>
+      </nav> 
     </header>
-    <body>
-
     
-    
+    <div class="container">
+      <h1>ANN ARBOR'S FINEST</h1>
+      <img class="mySlides" src="images/yellowpink.png" alt="Yellow and pink ombre pattern" style="width:100%"></img>
+      <img class="mySlides" src="images/pinkorange.png" alt="Pink and orange ombre pattern" style="width:100%" ></img>
+      <img class="mySlides" src="images/purplepink.png" alt="Purple and pink ombre pattern" style="width:100%"></img>
+    </div>
 
-      <div class="container">
-       <h1>ANN ARBOR'S FINEST</h1>
-        <img class="mySlides" src="images/yellowpink.png" style = "width:100%"></img>
-        <img class = "mySlides" src = "images/pinkorange.png" style = "width:100%" ></img>
-        <img class = "mySlides" src = "images/purplepink.png" style = "width:100%"></img>
-      
-        
-
-      </div>
-      <script>
-          var slideIndex = 0;
-      carousel();
-      
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1}
-        x[slideIndex-1].style.display = "block";
-        setTimeout(carousel, 1600); // Change image every 2 seconds
+    <script>
+    var slideIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
       }
-      
-      </script>
-       
-      
-
-    </div>
-
-    <main id="main">
-
-    <div class = "aboutsection">
-      <div class="bold">Ann Arbor's Finest is your guide to the best food, drinks, and hidden gems of Ann Arbor. </div>
-      
-        <div class = "welcome">Welcome to Ann Arbor's Finest! Our names are Neha Kotagiri and Mia Inakage. We are students at the University of Michigan School of Information studying UX Design, and we love to eat! </div>
-        
-        
-        
-        
-
-    </div>
-
-    <div class = "contact">
-      <div class = "contacttext"> If you have any questions or would like to let us know your favorite foods and drinks in Ann Arbor, please don't hesitate to reach out!</div>
-
-
-
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1
+      }
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 1600); // Change image every 2 seconds
+    }
+    </script>
     
-
-    <div class="emailform">
-      <form action="action_page.php">
+    <main id="main">
+      <div class="aboutsection">
+        <div class="description">
+          <h2>Arbor's Finest is your guide to the best food, drinks, and hidden gems of Ann Arbor.</h2>
+        </div>
+        <div class="aboutus">
+          <p>Welcome to Ann Arbor's Finest! Our names are Neha Kotagiri and Mia Inakage. We are students at the University of Michigan School of Information studying UX Design, and we love to eat!</p>
+        </div>
+      </div>
+      
+      <div class="contact">
+        <div class="contacttext">
+          <p>If you have any questions or would like to let us know your favorite foods and drinks in Ann Arbor, please don't hesitate to reach out!</p>
+        </div>
+        
+        <div class="emailform">
+          <form action="action_page.php">
     
         <label for="fname">Full Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name...">
@@ -108,12 +84,12 @@
 
   
   </main>
-</body>
+
 
   <footer >
 
     <h2> Made by hungry students for hungry students :) </h2>
     <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
     </footer>
-    
+  </body>
   </html>
