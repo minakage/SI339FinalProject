@@ -5,144 +5,155 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Ann Arbor Drinks</title>
   </head>
-
+  
   <body>
-    <a class = "skip" href="#main">Skip to Main Content</a>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
-      
-    
-        <nav>
-            <ul class="nav_links">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="food.html">Food</a></li>
-              <li><a href="drinks.html" class="activelink">Drinks</a></li>
-              <li><a href="favs.html">Favorites</a></li>
-        </nav> 
-       
+      <nav>
+        <ul class="nav_links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="drinks.html" class="activelink">Drinks</a></li>
+          <li><a href="favs.html">Favorites</a></li>
+        </ul>
+      </nav>
     </header>
-  
-      <div class="container" id="food">
-       <h1>DRINKS</h1>
-
-         <img class="mySlides" src="images/yellowpink.png" alt = "Yellow and pink ombre pattern" style = "width:100%"></img>
-         <img class = "mySlides" src = "images/pinkorange.png" alt = "Pink and orange ombre pattern" style = "width:100%"></img>
-         <img class = "mySlides" src = "images/purplepink.png" alt = "Purple and pink ombre pattern" style = "width:100%"></img>
-       
-       </div>
-       <script>
-           var slideIndex = 0;
-       carousel();
-       
-       function carousel() {
-         var i;
-         var x = document.getElementsByClassName("mySlides");
-         for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-         }
-         slideIndex++;
-         if (slideIndex > x.length) {slideIndex = 1}
-         x[slideIndex-1].style.display = "block";
-         setTimeout(carousel, 1600); // Change image every 2 seconds
-       }
-       
-       </script>
-
-<main id="main">
-
-    <div class="drinkgallery">
-      
-      <div class="shinola">
-        <img src = "images/shinolacafe.jpeg" alt = "Interior of Shinola Cafe" >
-        <div class ="shinolaGrid">
-        <h1> Shinola </h1>
-      <p> Hidden in the basement of Detroit watch and leather brand Shinola, this cafe is a charming hidden gem of Ann Arbor. With sustainably harvested coffee, pressed paninis, and organic sweet, Shinola should make its way to the top of your Ann Arbor Bucket list.  </p>
-    </div>
-    </div>
-
-    <div class = "literati">
-    <img src = "images/literaticoffee.jpeg" alt = "Interior of Literati Coffee shop">
-    <div class ="literatiGrid">
-    <h1> Literati </h1>
-    <p> “Literati Coffee is home for all book lovers and coffee fanatics. Located in Downtown Ann Arbor, it provides a vibrant yet relaxing ambiance. </p>
-    </div>
-  </div>
     
-    <div class = "labcafe">
-    <img src = "images/labcoffee.jpeg" alt = "Interior of Lab Coffee shop">
-    <div class ="labGrid">
-    <h1> Lab Cafe</h1>
-    <p> Lab Cafe is a light-filled cafe known for pour-over cups & colorful bakery fare and showcases of local art & musicians. Located on E.Liberty, it’s another Ann Arbor hidden gem and the perfect place to be between classes, for a study break, or a quick chat with friends and family. Talented baristas and a pleasant ambiance make Lab Cafe a picture perfect nook of Ann Arbor.  </p>
-    </div>
-  </div>
+    
+    
+    <main>
+      <div class="container" id="food">
+        <h1>Drinks</h1>
+        <img class="mySlides" src="images/yellowpink.png" alt="Yellow and pink ombre pattern" style="width:100%"></img>
+        <img class = "mySlides" src="images/pinkorange.png" alt="Pink and orange ombre pattern" style="width:100%"></img>
+        <img class = "mySlides" src="images/purplepink.png" alt="Purple and pink ombre pattern" style="width:100%"></img>
+      </div>
+      
+      <script>
+        const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+        if (!!isReduced){
+          var slideIndex = 0;
+          carousel();
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+              slideIndex = 1
+            }
+            x[slideIndex-1].style.display = "block";
+            clearTimeout(carousel, 0); 
+          }
+        }
+        else {
+          var slideIndex = 0;
+          carousel();
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+              slideIndex = 1
+            }
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 1600); 
+          }
+        }
+      </script>
 
-    <div class = "roosroast">
-    <img src = "images/roosroast.jpeg" alt = "Outside view of Roos Roast shop">
-    <div class ="roosGrid">
-    <h1> Roos Roast</h1>
-    <p> “Home of Lobster Butter Love, breakfast food, and the best coffee in Ann Arbor”. Roos Roast is on a mission to incorporate sustainability and environmental awareness into everything they do, and to support local farmers and artisans. With an eclectic, idiosyncratic, homemade vibe, Roos Roast is a breath of fresh air in Ann Arbor. Located on Liberty Street, Roos Roast is a must visit for all Ann Arborites.  </p>
-    </div>
-  </div>
-
-    <div class="cometcoffee">
-    <img src = "images/cometcoffee.jpeg" alt = "Outside view of Comet Coffee shop">
-    <div class ="cometGrid">
-      <h1>Comet Coffee</h1>
-      <p> Located in Nickel’s Arcade, Comet Coffee is a cozy and charming coffee shop with unparalleled espresso. It’s the perfect place to sit with friends or grab a quick coffee on the go! </p>
-    </div>
-  </div>
-
-    <div class="dingtea">
-    <img src = "images/dingtea.jpeg" alt = "Six different Ding Tea drinks with boba topping">
-    <div class ="dingGrid">
-      <h1> Ding Tea</h1>
-      <p> Ding Tea’s mission is to promote Taiwanese tea culture all over the world. Located on East Liberty Street, it’s the perfect place to stop by between classes or with friends. Their classic Okinawa, Taro, and Thai teas are the perfect way to start your day or night. In addition to classic milk teas, you can also find various yogurts and matches as well. 
-       </p>
-    </div>
-  </div>
-
-    <div class="sharetea">
-    <img src = "images/sharetea.jpeg" alt = "Two Share Tea milk teas with boba topping">
-    <div class ="shareGrid">
-    <h1> ShareTea</h1>
-    <p> ShareTea is loved by all Milk Tea enthusiasts, with aesthetically pleasing decor and all around good vibes. Located at the heart of campus, ShareTea is a must have for all Ann Arbor residents! </p>
-  </div>
-  </div>
-
-  <div class = "quickly">
-    <img src = "images/quickly.jpeg" alt = "Three different Quickly Tea drinks with boba toppings">
-    <div class ="quicklyGrid">
-    <h1> Quickly</h1>
-    <p> Quickly is not your average tea shop! With unique flavors like Pumpkin Spice Milk Tea, Cantaloupe Milk Tea, Caramel Slushies, and more, Quickly has something for everyone. Not only do they have drinks, they also have popcorn chicken, fries, and Musubi, as well. Located in a prime spot on South University Ave, you can pair a Quickly drink with your favorite Ann Arbor restaurants.  </p>
-  </div>
-</div>
-
-<div class = "m36">
-  <img src = "images/m-36coffee.jpg" alt = "Outside view of M-36 Coffee shop">
-  <div class ="m36Grid">
-  <h1> M-36 Coffee Roasters Cafe</h1>
-  <p> M-36 Coffee Roasters Cafe is a favorite among many UofM students, serving exceptionally crafted coffees and foods for on the go.</p>
-</div>
-</div>
-
-  <div class="sweetwaters">
-    <img src = "images/sweetwaters.jpeg" alt = "Sweetwaters drink with whipped cream">
-    <div class ="sweetGrid">
-    <h1> Sweetwaters</h1>
-    <p> Founded in Ann Arbor by two University of Michigan alum, Sweetwaters is the UMICH student’s essential. You can find everything at sweetwaters, from your classic coffees to unique, Asian-inspired beverages. Not only is sweetwaters known for it’s menu, it’s also the perfect place to study. With numerous locations in Ann Arbor and across the United States, Sweetwaters is the place to be whether you’re catching up with friends or studying for exams.  </p>
-  </div>
-</div>
-  </div>
-  
-
+      <div class="drinkgallery" id="main">
+        
+        <div class="shinola">
+          <img src="images/shinolacafe.jpeg" alt="Interior of Shinola Cafe" >
+          <div class="shinolaGrid">
+            <h1>Shinola</h1>
+            <p>Hidden in the basement of Detroit watch and leather brand Shinola, this cafe is a charming hidden gem of Ann Arbor. With sustainably harvested coffee, pressed paninis, and organic sweet, Shinola should make its way to the top of your Ann Arbor Bucket list.</p>
+          </div>
+        </div>
+        
+        <div class="literati">
+          <img src="images/literaticoffee.jpeg" alt="Interior of Literati Coffee shop">
+          <div class="literatiGrid">
+            <h1>Literati</h1>
+            <p>Literati Coffee is home for all book lovers and coffee fanatics. Located in Downtown Ann Arbor, it provides a vibrant yet relaxing ambiance.</p>
+          </div>
+        </div>
+        
+        <div class="labcafe">
+          <img src="images/labcoffee.jpeg" alt="Interior of Lab Coffee shop">
+          <div class="labGrid">
+            <h1>Lab Cafe</h1>
+            <p>Lab Cafe is a light-filled cafe known for pour-over cups & colorful bakery fare and showcases of local art & musicians. Located on E.Liberty, it’s another Ann Arbor hidden gem and the perfect place to be between classes, for a study break, or a quick chat with friends and family. Talented baristas and a pleasant ambiance make Lab Cafe a picture perfect nook of Ann Arbor.</p>
+          </div>
+        </div>
+        
+        <div class="roosroast">
+          <img src="images/roosroast.jpeg" alt="Outside view of Roos Roast shop">
+          <div class="roosGrid">
+            <h1>Roos Roast</h1>
+            <p>Home of Lobster Butter Love, breakfast food, and the best coffee in Ann Arbor”. Roos Roast is on a mission to incorporate sustainability and environmental awareness into everything they do, and to support local farmers and artisans. With an eclectic, idiosyncratic, homemade vibe, Roos Roast is a breath of fresh air in Ann Arbor. Located on Liberty Street, Roos Roast is a must visit for all Ann Arborites.</p>
+          </div>
+        </div>
+      
+        <div class="cometcoffee">
+          <img src="images/cometcoffee.jpeg" alt="Outside view of Comet Coffee shop">
+          <div class="cometGrid">
+            <h1>Comet Coffee</h1>
+            <p>Located in Nickel’s Arcade, Comet Coffee is a cozy and charming coffee shop with unparalleled espresso. It’s the perfect place to sit with friends or grab a quick coffee on the go!</p>
+          </div>
+        </div>
+      
+        <div class="dingtea">
+          <img src="images/dingtea.jpeg" alt="Six different Ding Tea drinks with boba topping">
+          <div class="dingGrid">
+            <h1>Ding Tea</h1>
+            <p>Ding Tea’s mission is to promote Taiwanese tea culture all over the world. Located on East Liberty Street, it’s the perfect place to stop by between classes or with friends. Their classic Okinawa, Taro, and Thai teas are the perfect way to start your day or night. In addition to classic milk teas, you can also find various yogurts and matches as well.</p>
+          </div>
+        </div>
+      
+        <div class="sharetea">
+          <img src="images/sharetea.jpeg" alt="Two Share Tea milk teas with boba topping">
+          <div class="shareGrid">
+            <h1>ShareTea</h1>
+            <p>ShareTea is loved by all Milk Tea enthusiasts, with aesthetically pleasing decor and all around good vibes. Located at the heart of campus, ShareTea is a must have for all Ann Arbor residents!</p>
+          </div>
+        </div>
+      
+        <div class="quickly">
+          <img src="images/quickly.jpeg" alt="Three different Quickly Tea drinks with boba toppings">
+          <div class="quicklyGrid">
+            <h1>Quickly</h1>
+            <p>Quickly is not your average tea shop! With unique flavors like Pumpkin Spice Milk Tea, Cantaloupe Milk Tea, Caramel Slushies, and more, Quickly has something for everyone. Not only do they have drinks, they also have popcorn chicken, fries, and Musubi, as well. Located in a prime spot on South University Ave, you can pair a Quickly drink with your favorite Ann Arbor restaurants.</p>
+          </div>
+        </div>
+      
+        <div class="m36">
+          <img src="images/m-36coffee.jpg" alt="Outside view of M-36 Coffee shop">
+          <div class="m36Grid">
+            <h1>M-36 Coffee Roasters Cafe</h1>
+            <p>M-36 Coffee Roasters Cafe is a favorite among many UofM students, serving exceptionally crafted coffees and foods for on the go.</p>
+          </div>
+        </div>
+      
+        <div class="sweetwaters">
+          <img src="images/sweetwaters.jpeg" alt="Sweetwaters drink with whipped cream">
+          <div class="sweetGrid">
+            <h1>Sweetwaters</h1>
+            <p>Founded in Ann Arbor by two University of Michigan alum, Sweetwaters is the UMICH student’s essential. You can find everything at sweetwaters, from your classic coffees to unique, Asian-inspired beverages. Not only is sweetwaters known for it’s menu, it’s also the perfect place to study. With numerous locations in Ann Arbor and across the United States, Sweetwaters is the place to be whether you’re catching up with friends or studying for exams.</p>
+          </div>
+        </div>
+      </div>
     </main>
-  
-
-    <footer >
-
-      <h2> Made by hungry students for hungry students :) </h2>
-      <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
-      </footer>
-
-    </body>
+    
+    <footer>
+      <h2>© Mia Inakage, Neha Kotagiri SI 339</h2>
+    </footer>
+  </body>
 </html>
   

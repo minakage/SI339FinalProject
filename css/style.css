@@ -1,4 +1,4 @@
-html {
+html{
   width: 100%;
   overflow-x: hidden;
 }
@@ -13,13 +13,17 @@ a.skip{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
+  border: black 2px solid;
+  border-radius: 15px;
 }
 
+
 a.skip:focus{
-  top:20px;
+  top: 20px;
   color: black;
   text-decoration-style: solid;
 }
+
 
 *:focus{
   border: 2px solid black;
@@ -27,37 +31,31 @@ a.skip:focus{
 
 
 body img{
-    width: 300px;
+  width: 300px;
 }
-
 
 
 body{
-    
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0px;
-    width: 100vw
-}
-
-h1{
-    text-align: center;
-    
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0px;
+  width: 100vw
 }
 
 
-header {
+header{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-nav {
+
+nav{
   width: 100%;
 }
 
-.nav_links {
+
+.nav_links{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -72,341 +70,335 @@ nav {
 }
 
 
-
 nav a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-decoration:none;
-    color:black;
-    font-size: 30px;
-    margin:auto;
-  
-  
-
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration:none;
+  color:black;
+  font-size: 30px;
+  margin:auto;
 }
+
 
 nav a:hover{
-    color:blueviolet;
+  color:blueviolet;
 }
+
 
 .activelink{
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 40px;
-    font-weight: bold;
-   
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  font-weight: bold;
 }
 
 
-.foodgallery{
-    background-color: black;
-    color: white;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: clip;
-    row-gap: 100px;
+h1{
+  text-align: center; 
 }
 
+.mySlides{
+  object-fit: cover;
+  width: 100px;
+  height: 500px;
+}
 
 
 .container{
-    width: 100%;
-    margin: auto;
-    
-    text-align: center;  
-    filter:opacity(90%);
-    
-}
-
-
-
-
-.mySlides{
-    object-fit:cover;
-    
-    width: 100px;
-    height: 500px;   
-    
+  width: 100%;
+  margin: auto;
+  text-align: center;  
+  filter: opacity(90%); 
 }
 
 
 .container h1{
-    position: absolute;
-    align-items: center;
-    width:100%;
-    font-size: 110px;
-    top: 50%;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  font-size: 70px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -105%);
-    color:black;
-  
+  color: black;
+  text-transform: uppercase;
 }
 
 
-
 .aboutsection{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    background-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: black;
 }
 
 
 .description{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 35px;
-    font-size: 35px;
-    font-weight: bold;
-    color: white;
-}
-.aboutus{
-    padding-bottom: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    color:white;
-    text-align: center;
-    
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
 }
 
+
+.aboutus{
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
 
 
 .contact{
-    width: 60%;
-    min-height: 60vh;
-    margin: auto;
-    text-align: center;
-    background-color: white;
-    
-
+  width: 60%;
+  min-height: 60vh;
+  margin: auto;
+  text-align: center;
+  background-color: white;
 }
+
 
 .contacttext{
-    padding: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    color:black;
-    text-align:center;
+  padding: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
 }
 
-input[type=text], select, textarea {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid whitesmoke; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: black;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: white;
-    color:black;
-    border: solid 1px black;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .emailform {
-    
-    border-radius: 5px;
-    background-color: #f2f2f2;
-   
-  }
+
+input[type=text], select, textarea{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%; 
+  padding: 12px; 
+  border: 2px solid whitesmoke; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 10px; 
+  margin-bottom: 16px;
+  resize: vertical;
+}
   
 
-  .flip-card {
-    background-color: transparent;
-    width: 500px;
-    height: 300px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    border: blueviolet 20px solid;
-    border-radius: 10px;
-    margin: auto;
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position:absolute;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+input[type=submit]{
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
   
 
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #ffffff;
-    color: black;
-  }
-  
-
-  /* Style the back side */
-  .flip-card-back {
-    
-    transform: rotateY(180deg);
-  }
-
-
-.drinkgallery {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-  
+input[type=submit]:hover{
+  background-color: white;
+  color: black;
+  border: solid 1px black;
 }
 
-.shinola, .literati, .labcafe, .roosroast, .cometcoffee, .dingtea, .quickly, .sharetea, .m36, .sweetwaters {
-    color:white;
-    display:grid;
-    grid-template-columns: auto;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 30px;
-    text-align: center;
-    word-wrap: break-word;
-    padding: 60px;
-    
+
+.emailform{
+  border: black solid 5px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding-top: 16px;
 }
 
-.shinola img, .literati img, .labcafe img, .roosroast img, .cometcoffee img, .dingtea img, .quickly img, .sharetea img, .m36 img, .sweetwaters img  {
+
+.foodgallery{
+  background-color: black;
+  color: white;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: clip;
+}
+
+
+.zingermans, .fritas, .misskim, .zola, .mani, .jgarden, .savas, .nypd, .tomukun, .madras{
+  padding: 70px;
+}
+
+
+.zingermans img, .fritas img, .misskim img, .zola img, .mani img, .jgarden img, .savas img, .nypd img, .tomukun img, .madras img{
+  width: 500px;
+  height: 300px;
+}
+  
+
+.flip-card{
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px; 
+  border: blueviolet 20px solid;
+  border-radius: 10px;
+  margin: auto;
+}
+  
+
+.flip-card-inner{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+  
+  
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+  
+
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+  
+
+.flip-card-front{
+  background-color: #ffffff;
+  color: black;
+}
+  
+
+.flip-card-back{
+  transform: rotateY(180deg);
+}
+
+
+.drinkgallery{
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.shinola, .literati, .labcafe, .roosroast, .cometcoffee, .dingtea, .quickly, .sharetea, .m36, .sweetwaters{
+  color: white;
+  display: grid;
+  grid-template-columns: auto;
+  max-width: 50%;
+  text-align: center;
+  justify-content: center;
+  padding: 60px;   
+  margin: auto;
+}
+
+
+.shinola img, .literati img, .labcafe img, .roosroast img, .cometcoffee img, .dingtea img, .quickly img, .sharetea img, .m36 img, .sweetwaters img{
   border: blueviolet 20px solid;
   border-radius: 20px;
-  width: 100%;
-  height: auto;
-  width: 100%;
-  height: auto;
+  margin: auto;
 }
-
 
 
 .favgallery{
   background-color: black;
   display: grid;
   color: white;
-    justify-content: center;
-    grid-template-columns: auto;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: clip;
-    row-gap: 100px;
-
+  justify-content: center;
+  grid-template-columns: auto;
+  text-align: center;
+  padding: 50px;
+  overflow: clip;
+  row-gap: 100px;
+  column-gap: 50px;
 }
 
-.favgallery img {
+
+.favgallery img{
   border: blueviolet 20px solid;
   border-radius: 20px;
-  width: 100%;
-  height: auto;
 }
 
 
-.lightbox {
-  /* Default to hidden */
+.lightbox{
   display: none;
-
-  /* Overlay entire screen */
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  
-  /* A bit of padding around image */
   padding: 1em;
-
-  /* Translucent background */
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Unhide the lightbox when it's the target */
-.lightbox:target {
+
+.lightbox:target{
   display: block;
-  
 }
 
-.lightbox span {
-  /* Full width and height */
+
+.lightbox span{
   display: block;
   width: 100%;
   height: 100%;
-
-  /* Size and position background image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   justify-content: center;
 }
 
 
-
-
 footer{
-    padding-left: 20px;
-    padding-top: 8px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: white;
-    color: black;
-
-    margin: auto;
-    text-align: left;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  color: black;
+  margin-top: 60px;
+  text-align: left;
+  font-size: 12px;
 }
 
 
 
+@media screen and (min-width: 800px){
+  
+  .nav_links{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+  
 
-@media screen and (min-width: 800px) {
-
-  .nav_links {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  justify-content: space-evenly;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-
+  .container h1{
+    font-size: 110px;
+  }
+  
+  
+  .description{
+    font-size: 30px;
+  }
+  
+  
+  .aboutus{
+    font-size: 25px;
+  }
+  
+  
+  .contacttext{
+    font-size: 25px;
+  }
 
 
   .foodgallery{
@@ -414,60 +406,126 @@ footer{
     text-align: center;
     margin: auto;
     column-gap: 70px;
-    
-}
-
-.drinkgallery {
-  background-color: black;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  flex-basis: 200px;
-}
-
-.favgallery {
-  grid-template-columns: auto auto;
-}
-
-
-}
-
-
-@media screen and (min-width: 1200px) {
-  .nav_links {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-    text-transform: uppercase;
+    padding: 50px;
   }
 
-  .foodgallery{
-    background-color: black;
-    color: white;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    text-align: center;
-    padding-top: 50px;
-    column-gap: 70px;
-}
+
+  .zingermans img, .fritas img, .misskim img, .zola img, .mani img, .jgarden img, .savas img, .nypd img, .tomukun img, .madras img{
+    width: 300px;
+    height: 200px;
+  }
+
+
+  .flip-card{
+    width: 300px;
+    height: 200px;
+  }
   
- 
-.favgallery {
-  grid-template-columns: auto auto auto;
+  
+  .flip-card-front, .flip-card-back{
+    width: 300px;
+    height: 200px;
+  }
+  
+  
+  .drinkgallery{
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap; 
+  }
+
+
+  .shinola, .literati, .labcafe, .roosroast, .cometcoffee, .dingtea, .quickly, .sharetea, .m36, .sweetwaters{
+    max-width: 30%;  
+  }
+
+  
+  .favgallery{
+    grid-template-columns: auto auto;
+  }
+  
+  
+  footer{
+    font-size: 14px;
+  }
 }
 
- 
 
+
+@media screen and (min-width: 1200px){
+  
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .container h1{
+    font-size: 150px;
+  }
+
+
+  .description{
+    font-size: 35px;
+  }
+
+
+  .aboutus{
+    font-size: 30px;
+  }
+
+
+  .contacttext{
+    font-size: 30px;
+  }
+
+
+  .foodgallery{
+    grid-template-columns: auto auto auto;
+    row-gap: 100px;
+  }
+
+  
+  .zingermans, .fritas, .misskim, .zola, .mani, .jgarden, .savas, .nypd, .tomukun, .madras{
+    padding: 0px;
+  }
+
+
+  .madras{
+    grid-column: 2 / 3;
+  }
+
+
+  .shinola, .literati, .labcafe, .roosroast, .cometcoffee, .dingtea, .quickly, .sharetea, .m36, .sweetwaters{
+    max-width: 20%;  
+  }
+  
+  
+  .favgallery{
+    grid-template-columns: auto auto auto;
+  }
+  
+  
+  .napalibrew{
+    grid-column: 2 / 3;
+  }
+  
+  
+  footer{
+    font-size: 16px;
+  }
 }
 
 
 
-@media screen and (prefers-reduced-motion: reduce) { 
+@media screen and (prefers-reduced-motion: reduce){ 
+  
   .container{
     motion: none;
+  }
+
+
+  a.skip{
+    transition: none;
   }
 }

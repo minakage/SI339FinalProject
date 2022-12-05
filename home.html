@@ -8,46 +8,67 @@
   </head>
 
   <body>
-    <a class = "skip" href="#main">Skip to Main Content</a>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
       <nav>
-        <ul class="nav_links">
+        <ul class="nav_links"> 
           <li><a href="home.html" class="activelink">Home</a></li>
           <li><a href="food.html">Food</a></li>
           <li><a href="drinks.html">Drinks</a></li>
           <li><a href="favs.html">Favorites</a></li>
+        </ul>
       </nav> 
     </header>
     
-    <div class="container">
-      <h1>ANN ARBOR'S FINEST</h1>
-      <img class="mySlides" src="images/yellowpink.png" alt="Yellow and pink ombre pattern" style="width:100%"></img>
-      <img class="mySlides" src="images/pinkorange.png" alt="Pink and orange ombre pattern" style="width:100%" ></img>
-      <img class="mySlides" src="images/purplepink.png" alt="Purple and pink ombre pattern" style="width:100%"></img>
-    </div>
+    <main>
+      <div class="container">
+        <h1>AA's Finest</h1>
+        <img class="mySlides" src="images/yellowpink.png" alt="Yellow and pink ombre pattern" style="width:100%"></img>
+        <img class="mySlides" src="images/pinkorange.png" alt="Pink and orange ombre pattern" style="width:100%" ></img>
+        <img class="mySlides" src="images/purplepink.png" alt="Purple and pink ombre pattern" style="width:100%"></img>
+      </div>
+  
+      <script>
+      const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+      if (!!isReduced){
+        var slideIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {
+            slideIndex = 1
+          }
+          x[slideIndex-1].style.display = "block";
+          clearTimeout(carousel, 0); 
+        }
+      }
+      else {
+        var slideIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {
+            slideIndex = 1
+          }
+          x[slideIndex-1].style.display = "block";
+          setTimeout(carousel, 1600); 
+        }
+      }
+      </script>
 
-    <script>
-    var slideIndex = 0;
-    carousel();
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > x.length) {
-        slideIndex = 1
-      }
-      x[slideIndex-1].style.display = "block";
-      setTimeout(carousel, 1600); // Change image every 2 seconds
-    }
-    </script>
-    
-    <main id="main">
-      <div class="aboutsection">
+      <div class="aboutsection" id="main">
         <div class="description">
-          <h2>Arbor's Finest is your guide to the best food, drinks, and hidden gems of Ann Arbor.</h2>
+          <h2>Ann Arbor's Finest is your guide to the best food, drinks, and hidden gems of Ann Arbor.</h2>
         </div>
         <div class="aboutus">
           <p>Welcome to Ann Arbor's Finest! Our names are Neha Kotagiri and Mia Inakage. We are students at the University of Michigan School of Information studying UX Design, and we love to eat!</p>
@@ -60,36 +81,21 @@
         </div>
         
         <div class="emailform">
-          <form action="action_page.php">
+          <form action="https://formspree.io/f/xbjbngak" method="POST">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+            <label for="lname">Your Email</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your email...">
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </main>
     
-        <label for="fname">Full Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name...">
-    
-        <label for="lname">Your Email</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
-    
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-    
-        <input type="submit" value="Submit">
-    
-      </form>
-    </div>
-      
-  </div>
-
-
-
-    
-
-  
-  </main>
-
-
-  <footer >
-
-    <h2> Made by hungry students for hungry students :) </h2>
-    <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
+    <footer >
+      <h2>© Mia Inakage, Neha Kotagiri SI 339</h2>
     </footer>
   </body>
-  </html>
+</html>

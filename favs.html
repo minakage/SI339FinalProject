@@ -5,128 +5,121 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Our Favorites</title>
   </head>
-
+  
   <body>
-    <a class = "skip" href="#main">Skip to Main Content</a>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
-     
-      
-        <nav>
-            <ul class="nav_links">
-          
-              <li><a href="home.html">Home</a></li>
-              <li><a href="food.html">Food</a></li>
-              <li><a href="drinks.html">Drinks</a></li>
-              <li><a href="favs.html" class = "activelink">Favorites</a></li>
-        </nav> 
-       
+      <nav>
+        <ul class="nav_links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="drinks.html">Drinks</a></li>
+          <li><a href="favs.html" class="activelink">Favorites</a></li>
+        </ul>
+      </nav> 
     </header>
-   
     
+    <main>
       <div class="container" id="food">
-       <h1>FAVORITES</h1>
-         <img class="mySlides" src="images/yellowpink.png" alt = "Yellow and pink ombre pattern" style = "width:100%"></img>
-         <img class = "mySlides" src = "images/pinkorange.png" alt = "Pink and orange ombre pattern" style = "width:100%"></img>
-         <img class = "mySlides" src = "images/purplepink.png" alt = "Purple and pink ombre pattern" style = "width:100%"></img>
-       
-       </div>
-       <script>
-           var slideIndex = 0;
-       carousel();
-       
-       function carousel() {
-         var i;
-         var x = document.getElementsByClassName("mySlides");
-         for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-         }
-         slideIndex++;
-         if (slideIndex > x.length) {slideIndex = 1}
-         x[slideIndex-1].style.display = "block";
-         setTimeout(carousel, 1600); // Change image every 2 seconds
-       }
-       
-       </script>
+        <h1>Favorites</h1>
+        <img class="mySlides" src="images/yellowpink.png" alt="Yellow and pink ombre pattern" style="width:100%"></img>
+        <img class="mySlides" src="images/pinkorange.png" alt="Pink and orange ombre pattern" style="width:100%"></img>
+        <img class="mySlides" src="images/purplepink.png" alt="Purple and pink ombre pattern" style="width:100%"></img>
+      </div>
+      
+      <script>
+        const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+        if (!!isReduced){
+          var slideIndex = 0;
+          carousel();
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+              slideIndex = 1
+            }
+            x[slideIndex-1].style.display = "block";
+            clearTimeout(carousel, 0); 
+          }
+        }
+        else {
+          var slideIndex = 0;
+          carousel();
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+              slideIndex = 1
+            }
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 1600); 
+          }
+        }
+      </script>
 
-<main id="main">
-
-
-  
-<div class = "favgallery">
-
-<!-- thumbnail image wrapped in a link -->
-<div class = "ramen"> 
-<a href="#img1">
-  <img src="images/tonkotsuramen.jpg" alt = "Bowl of Slurping Turtle Tonkotsu ramen">
-</a>
-<h1>Slurping Turtle Tonkotsu ramen</h1>
-<p>The tonkotsu ramen from Slurping Turtle is a must try when in Ann Arbor. This creamy pork broth base soup with its amazing noodles and toppings will definitely not disappoint.</p>
-</div>
-
-<div class = "porkbao"> 
-<a href="#img2">
-  <img src="images/porkbellybao.png" alt = "Slurping Turtle Pork Belly Bao">
-</a>
-<h1>Slurping Turtle's Pork Belly Bao</h1>
-<p>Another one of our favorites is the Pork Belly Bao yet again from the delicious Slurping Turtle. The tender glazed pork belly is served in a pillowy bun as well as topped with a garnish. We highly recommend this appetizer to accompany your ramen.</p>
-</div>
-
-<!-- thumbnail image wrapped in a link -->
-<div class = "nothai"> 
-<a href="#img3">
-  <img src="images/nothaifriedrice.jpeg" alt = "No Thai Fried Rice">
-</a>
-<h1> No Thai Fried Rice</h1>
-<p>You cannot go wrong with No Thai's classic fried rice with white onion, green onion, peas, carrots, egg, with a savory sauce and your preferred spice level. This 
-  is one of our personal favorites after a long day of classes.
-</p>
-</div>
-
-<div class = "napalibrew"> 
-<a href="#img4">
-  <img src="images/NapaliBrew.png" alt = "Sweetwaters Napali Brew Drink">
-</a>
-<h1> Sweetwater's Napali Brew </h1>
-<p>The Napali Brew is inspired by the sandy beaches of Hawaii's Napali Coast. It is made with vanilla ice cream, espresso & hazelnut syrup, topped with their housemade whipped cream. This taste of tropical paradise is the perfect treat after an exam or long week of studying.</p>
-</div>
-
-
-<!-- lightbox container hidden with CSS -->
-<a href="#" class="lightbox" id="img1">
-  <span style="background-image: url('images/tonkotsuramen.jpg')"></span>
-</a>
-
-
-
-<!-- lightbox container hidden with CSS -->
-<a href="#" class="lightbox" id="img2">
-  <span style="background-image: url('images/porkbellybao.png')"></span>
-</a>
-
-
-<!-- lightbox container hidden with CSS -->
-<a href="#" class="lightbox" id="img3">
-  <span style="background-image: url('images/nothaifriedrice.jpeg')"></span>
-</a>
-</div>
-
-
-<!-- lightbox container hidden with CSS -->
-<a href="#" class="lightbox" id="img4">
-  <span style="background-image: url('images/NapaliBrew.png')"></span>
-</a>
-</div>
-
-
+      <div class="favgallery" id="main">
+        
+        <div class="ramen"> 
+          <a href="#img1">
+            <img src="images/tonkotsuramen.jpg" alt="Bowl of Slurping Turtle Tonkotsu ramen">
+          </a>
+          <h1>Slurping Turtle Tonkotsu ramen</h1>
+          <p>The tonkotsu ramen from Slurping Turtle is a must try when in Ann Arbor. This creamy pork broth base soup with its amazing noodles and toppings will definitely not disappoint.</p>
+        </div>
+        
+        <div class="porkbao"> 
+          <a href="#img2">
+            <img src="images/porkbellybao.png" alt="Slurping Turtle Pork Belly Bao">
+          </a>
+          <h1>Slurping Turtle's Pork Belly Bao</h1>
+          <p>Another one of our favorites is the Pork Belly Bao yet again from the delicious Slurping Turtle. The tender glazed pork belly is served in a pillowy bun as well as topped with a garnish. We highly recommend this appetizer to accompany your ramen.</p>
+        </div>
+        
+        <div class="nothai"> 
+          <a href="#img3">
+            <img src="images/nothaifriedrice.jpeg" alt="No Thai Fried Rice">
+          </a>
+          <h1>No Thai Fried Rice</h1>
+          <p>You cannot go wrong with No Thai's classic fried rice with white onion, green onion, peas, carrots, egg, with a savory sauce and your preferred spice level. This is one of our personal favorites after a long day of classes.</p>
+        </div>
+        
+        <div class="napalibrew"> 
+          <a href="#img4">
+            <img src="images/NapaliBrew.png" alt="Sweetwaters Napali Brew Drink">
+          </a>
+          <h1>Sweetwater's Napali Brew</h1>
+          <p>The Napali Brew is inspired by the sandy beaches of Hawaii's Napali Coast. It is made with vanilla ice cream, espresso & hazelnut syrup, topped with their housemade whipped cream. This taste of tropical paradise is the perfect treat after an exam or long week of studying.</p>
+        </div>
+        
+        <a href="#" class="lightbox" id="img1">
+          <span style="background-image: url('images/tonkotsuramen.jpg')"></span>
+        </a>
+        
+        <a href="#" class="lightbox" id="img2">
+          <span style="background-image: url('images/porkbellybao.png')"></span>
+        </a>
+        
+        <a href="#" class="lightbox" id="img3">
+          <span style="background-image: url('images/nothaifriedrice.jpeg')"></span>
+        </a>
+        
+        <a href="#" class="lightbox" id="img4">
+          <span style="background-image: url('images/NapaliBrew.png')"></span>
+        </a>
+      </div>
     </main>
-  
-
+    
     <footer>
-
-      <h2> Made by hungry students for hungry students :) </h2>
-      <h3> © Mia Inakage, Neha Kotagiri SI 339</h3>
-      </footer>
-
-    </body>
-    </html>
+      <h2>© Mia Inakage, Neha Kotagiri SI 339</h2>
+    </footer>
+  </body>
+</html>
   
